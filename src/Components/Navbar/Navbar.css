@@ -1,0 +1,17 @@
+.active {
+	background-color: white;
+}
+.root {
+    flex-grow: 1;
+  }
+ .menuButton {
+    margin-right: 10px;
+  }
+ .title {
+    flex-grow: 1
+  }
+.root .bgcolor {
+	box-shadow:none;
+	background-color:#1976d2;
+	color: white;
+}

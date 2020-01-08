@@ -1,0 +1,48 @@
+.collaborative {
+	padding: 7vw 7vw 3vw 7vw;
+    margin:0 auto;
+    width: 100%;
+
+
+    @media screen and (max-width: 800px) {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+	.image {
+		width: 100%;
+		margin: auto auto;
+	}
+	.title {
+	font-size: 44px;
+	padding-top: 30px;
+	@media screen and (max-width: 800px) {
+        font-size: 36px;
+	}
+    }
+	.subtitle {
+		font-size: 24px;
+		@media screen and (max-width: 800px) {
+		font-size: 18px;
+		}
+	}
+	.signupEmail {
+		background-color: white;
+		border-radius: 7px;
+		width: 100%;
+		max-width: 400px;
+		line-height: 43px;
+		padding: 4px;
+		padding-left: 16px;
+		display: flex;
+		font-size: 24px;
+	}
+	.signupBtn {
+		width: 100%;
+		max-width: 250px;
+		border-radius: 7px;
+		font-size: 24px;
+		display: flex;
+	}
+		
+}

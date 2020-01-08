@@ -1,0 +1,127 @@
+.board {
+	background: linear-gradient(#3EB9DE,
+#3A80DE);
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-size: auto;
+background-size: cover;
+background-position: center;
+border-radius: 1rem;
+box-shadow: 0 10px 20px
+rgba(74,115,159,0.29);
+cursor: default;
+font-size: 1rem;
+margin-bottom: 30px;
+overflow: hidden;
+padding: 18px;
+position: relative;
+text-align: left;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+.board .header {
+    overflow: auto;
+    padding-bottom: 1rem;
+}
+
+.board .header .title {
+    float: left;
+}
+
+.board .lists {
+    min-width: 1000px;
+    overflow: auto;
+}
+
+.board .lists .list {
+    float: left;
+    margin: 0 10px 5px 0;
+    width: 230px;
+}
+.board .lists .list .list-content {
+    background-color: 
+    #E5EFF5;
+    border-radius: 6px;
+    box-shadow: 0,2px,4px,rgba(0,0,0,0.5);
+    padding: 8px;
+}
+
+.board .lists .list .list-content .card {
+    background-color: 
+    #CCDCE6;
+    border-radius: 4px;
+    font-size: .9rem;
+    margin-bottom: 8px;
+    min-height: 33px;
+    position: relative;
+    overflow: hidden;
+}
+
+.board .lists .list .list-content .card .card-content {
+    background-color: 
+    #fff;
+    padding: 6px 8px;
+    min-height: 33px;
+}
+.board .lists .list .list-content .card .card-content .labels {
+    overflow: auto;
+    margin: 4px 0;
+}
+.board .lists .list .list-content .card .card-content .labels .label {
+    border-radius: 3.5px;
+    height: 7px;
+    margin-right: 5px;
+    width: 30px;
+}
+.board .lists .list .list-content .card .card-content .labels .label.label-purple {
+    background-color: 
+    #C377E0;
+}
+.board .lists .list .list-content .card .card-content .labels .label.label-blue {
+    background-color: #00C2E0;
+}
+.board .lists .list .list-content .card .card-content .labels .label.label-red {
+    background-color: 
+    #EB5A46;
+}
+
+.board .lists .list .list-content .card .card-content .description {
+    margin-bottom: 14px;
+}
+
+.board .lists .list .list-content .card .card-content .card-users {
+    bottom: 7px;
+    position: absolute;
+    right: 7px;
+}
+
+.board .lists .list .list-content .card .card-content .card-users .user {
+    height: 28px;
+    margin-left: 5px;
+    width: 28px;
+}
+.board .user.user-1 {
+    background-image: url(https://d2k1ftgv7pobq7.cloudfront.net/meta/p/res/pattern-library/images/87c23234a3807e474d70ea3ab47bd8dc/user-1.png);
+}
+.board .user.user-2 {
+    background-image: url(https://d2k1ftgv7pobq7.cloudfront.net/meta/p/res/pattern-library/images/8022b0b4f4360ba3f737c48cd908e448/user-2.png);
+}
+.board .user.user-3 {
+    background-image: url(https://d2k1ftgv7pobq7.cloudfront.net/meta/p/res/pattern-library/images/5788b03f8281e4d0d993f95d97c6265f/user-3.png);
+}
+
+.board .user {
+    background-repeat: no-repeat;
+    background-size: contain;
+    float: left;
+    height: 38px;
+    width: 38px;
+}
+.board .lists .list .list-content .add-card {
+    color: 
+    #aaa;
+    font-size: .9rem;
+    margin: 0 0 5px 5px;
+}

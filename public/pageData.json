@@ -1,0 +1,71 @@
+{
+	"Collaborative": {
+		"Title": "Trello lets you work more collaboratively and get more done.",
+		"Text": "Trello’s boards, lists, and cards enable you to organize and prioritize your projects in a fun, flexible, and rewarding way.",
+		"imgUrl": "/images/Collaborative.png"
+	},
+	"WorkWithTeam": {
+		"Title": "Work with any team",
+		"Text": "Whether it’s for work, a side project or even the next family vacation, Trello helps your team stay organized.",
+		"imgUrl": "/images/workwithteam.png"
+	},
+	"Information": {
+		"Title": "Information at a glance",
+		"Text": "Dive into the details by adding comments, attachments, due dates, and more directly to Trello cards. Collaborate on projects from beginning to end.",
+		"imgUrl": "/images/information.png",
+		"WorkFlow": {
+			"Title": "Built-In Workflow Automation With Butler ",
+			"Text": "Let the robots do the work! Boost productivity by unleashing the power of automation across your entire team with Butler, and remove tedious tasks from your to-do lists with:",
+			"Lists": [
+				"Rule-Based Triggers",
+				"Custom Card & Board Buttons",
+				"Calendar Commands",
+				"Due Date Commands"
+			],
+			"imgUrl": "/images/butler.png"
+		}
+	},
+	
+	"TrelloWays": {
+		"Title": "Trello your way",
+		"Text": "Use Trello the way your team works best. We’ve got the flexibility & features to fit any team’s style.",
+		"Contents": [
+			{
+				"imgUrl": "/images/content1.png",
+				"header": "The Team Playbook",
+				"caption": "It’s easy to get your team up and running with Trello. We’ve collected all of the boards and tools you need to succeed in one handy resource.",
+				"btnText": "Make A Game Plan"
+			},
+			{
+				"imgUrl": "/images/content2.png",
+				"header": "A Productivity Platform",
+				"caption": "Integrate the apps your team already uses directly into your workflow. Power-Ups turn Trello boards into living applications to meet your team's unique business needs.",
+				"btnText": "Power-Up Your Woekflow"
+			},
+			{
+				"imgUrl": "/images/content3.png",
+				"header": "Always In Sync",
+				"caption": "No matter where you are, Trello stays in sync across all of your devices. Collaborate with your team anywhere, from sitting on the bus to sitting on the beach.",
+				"btnUrl": ["/images/btn-appstore-black.png", "images/btn-playstore-black.png"]
+			}
+		]		
+	},
+	"PlaningToday": {
+		"Title": "Start Planing Today",
+		"Text": "Sign up and become one of the millions of people around the world using Trello to get more done.",
+		"btnText": "Get Started-It's free!"
+	},
+	"FooterLists": [
+		"Templates",
+		"Pricing",
+		"Apps",
+		"Jobs",
+		"Blog",
+		"Developers",
+		"About",
+		"Help",
+		"Legal",
+		"Cookie Settings",
+		"Privacy"	
+	]
+}

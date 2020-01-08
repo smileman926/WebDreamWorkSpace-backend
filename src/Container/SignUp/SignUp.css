@@ -1,0 +1,32 @@
+#signup {
+	max-width: 400px;
+	align-items: center;
+
+	margin: auto;
+}
+
+.trello-main-logo {
+    display: block;
+    height: 43px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.menulists_sign {
+	list-style-type: none;
+	text-align: center;
+	margin: auto;
+	align-items: center;
+	margin: auto;
+	display: flex;
+	max-width: 700px;
+	/*margin-bottom: 1.25rem;*/
+}
+
+.menulists_sign li {
+	display: inline-block;
+}
+.menulists_sign li a {
+	padding: 5px 10px;
+}
