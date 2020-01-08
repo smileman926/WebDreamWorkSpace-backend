@@ -1,0 +1,76 @@
+.footer {
+	text-align: center;
+}
+.menulists {
+	list-style-type: none;
+	display: inline-block;
+	margin: auto;
+	text-align: center;
+	/*margin-bottom: 1.25rem;*/
+}
+
+.menulists li {
+	display: inline-block;
+}
+.menulists li a {
+	padding: 5px 10px;
+}
+
+ #language-picker-container {
+
+    background-color: transparent;
+    display: inline-block;
+    margin: 0 0 1.25rem;
+    position: relative;
+}
+
+#language-picker-container select#language-picker {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: 
+rgba(255,255,255,0.5);
+border: 2px solid
+#EDEFF0;
+color:
+    #959DA1;
+    padding: .5em;
+}
+.footer ul {
+    list-style-type: none;
+    overflow: auto;
+    padding: 0;
+    margin: 0 0 1.25rem;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.footer img.atlassian-logo-small {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto 17px;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+.footer div#language-picker-container::after {
+    background-image: url(https://d2k1ftgv7pobq7.cloudfront.net/meta/p/res/images/3a15a346421a08419648c0ca2f5e98b2/caret.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 0;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    content: "";
+    height: 16px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 11px;
+    top: 50%;
+    -webkit-transform: translateY(-50%) rotate(90deg);
+    transform: translateY(-50%) rotate(90deg);
+    width: 10px;
+}

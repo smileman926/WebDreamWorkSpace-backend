@@ -1,0 +1,178 @@
+.information {
+	padding: 3vw 7vw 3vw 7vw;
+    margin:0 auto;
+    width: 100%;
+
+
+}
+.image {
+	width: 100%;
+	margin: auto auto;
+}
+.title {
+	font-size: 44px;
+}
+.clipping-mask {
+    height: 320px;
+    overflow: hidden;
+    padding: 0 10px;
+}
+.phone {
+    border-radius: 32px;
+    background: -webkit-gradient(linear, left top, right top, from(#c3e8ff), to(#fff));
+    background: linear-gradient(90deg, 
+#c3e8ff,
+#fff);
+box-shadow: 0 10px 20px
+    rgba(74,115,159,0.29);
+    margin: 0 auto;
+    position: relative;
+    width: 290px;
+    max-width: 100%;
+}
+.phone .forehead {
+    opacity: .5;
+    position: relative;
+    height: 50px;
+}
+.phone .forehead div.earpiece {
+    height: 8px;
+    border-radius: 4px;
+    width: 72px;
+    margin: -4px 0 0 -36px;
+    top: 50%;
+    left: 50%;
+}
+.phone .forehead div {
+    background-color: 
+    #4985C2;
+    position: absolute;
+}
+.phone .forehead div.earpiece::before {
+    background-color: 
+    #4985C2;
+    border-radius: 50%;
+    content: "";
+    height: 10px;
+    position: absolute;
+    width: 10px;
+    margin: -1px 0 0 -51px;
+}
+.phone .forehead div.earpiece::after {
+    background-color: 
+    #4985C2;
+    border-radius: 50%;
+    content: "";
+    height: 16px;
+    position: absolute;
+    width: 16px;
+    margin: -4px 0 0 -72px;
+}
+.phone .buttons div.silent {
+    height: 31px;
+    left: -6px;
+    top: 70px;
+}
+.phone .buttons div {
+    background-color: 
+    #97BCE0;
+    border-radius: 4px 0 0 4px;
+    position: absolute;
+    width: 6px;
+}
+
+.phone .buttons div.volume {
+    height: 81px;
+    left: -6px;
+    top: 130px;
+}
+.phone .buttons div.lock {
+    border-radius: 0 4px 4px 0;
+    height: 61px;
+    right: -6px;
+    top: 130px;
+}
+.phone .screen {
+    overflow: hidden;
+    margin: 0 10px;
+}
+.clipping-mask .phone .screen .board {
+    background: -webkit-gradient(linear, left top, left bottom, from(#696cbf), to(#e2859f));
+    background: linear-gradient(
+#696cbf,
+    #e2859f);
+}
+.phone .screen .board {
+    border-radius: 6px;
+    box-shadow: none;
+    margin: 0;
+    padding: 10px;
+}
+.clipping-mask .phone .screen .board .header {
+    background-color: 
+    #3c4fa0;
+}
+.phone .screen .board .header {
+    margin: -10px -10px 10px;
+    background: 
+    #3A80DE;
+        background-color: rgb(58, 128, 222);
+    padding: 10px 0;
+    position: relative;
+}
+.board .header {
+    overflow: auto;
+    padding-bottom: 1rem;
+}
+.board .header .title {
+    float: left;
+}
+.phone .screen .board .header .title h3 {
+    background-color: 
+    transparent;
+    font-size: 1rem;
+}
+.board .header .title h3 {
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+    margin: 0;
+}
+.board .title h3, .board .lists .add-list {
+    background: 
+rgba(11,86,139,0.25);
+    background-color: rgba(11, 86, 139, 0.25);
+border-radius: 6px;
+color:
+    white;
+    padding: 9px 15px;
+}
+.phone .screen .board .header .title h3::before {
+    content: "←";
+    margin-right: 10px;
+}
+.phone .screen .board .header .title::after {
+    color: 
+    white;
+    content: "• • •";
+    font-size: 12px;
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+*, ::before, ::after {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 800px) {
+	.information {
+		grid-template-columns: 1fr;
+		text-align: center;
+	}
+	.title {
+		font-size: 36px;
+	}
+	.subtitle {
+		font-size: 18px;
+	}
+}

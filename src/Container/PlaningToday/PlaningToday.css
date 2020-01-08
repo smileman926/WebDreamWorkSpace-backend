@@ -1,0 +1,13 @@
+
+#get-started {
+	background-image: url(https://d2k1ftgv7pobq7.cloudfront.net/meta/p/res/images/97db7688a52a697ea9376a5f0fe5d98f/trellians-2x-2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 393px;
+}
+@media screen and (max-width: 800px) {
+	#get-started {
+		background-image: none;
+	}
+}
