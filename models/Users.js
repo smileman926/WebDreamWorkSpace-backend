@@ -15,7 +15,7 @@ const UserSchema = new Schema({
   confirm: {type: Boolean, default: false},
 
   //email: { type:String, unique: false}
-  username: {type:String, unique:false}
+  username: {type:String, unique:false}     
 });
 UserSchema.methods = {
   checkPassword: function(inputPassword) {
