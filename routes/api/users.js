@@ -1,36 +1,36 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const jwt = require('jsonwebtoken');
-const passport = require('../../passport');
-// const http = require('http');
-// const app = require('../../app');
+const jwt = require("jsonwebtoken");
+const passport = require("../../passport");
+// const http = require("http");
+// const app = require("../../app");
 // const server = http.createServer(app);
 const bcrypt = require("bcryptjs");
 
-require('dotenv').config();
+require("dotenv").config();
 const validateRegisterInput = require("../../validation/register");
 const validateLoginInput = require("../../validation/login");
 
 
-const messages = require('../../emailConfirm/messages')
-const User = require('../../models/Users');
-const templates = require('../../emailConfirm/templatesEmail');
-const sendEmail = require('../../emailConfirm/sendEmail')
-// router.get('/google', passport.authenticate('google', { scope: ['profile'] }))
+const messages = require("../../emailConfirm/messages")
+const User = require("../../models/Users");
+const templates = require("../../emailConfirm/templatesEmail");
+const sendEmail = require("../../emailConfirm/sendEmail")
+// router.get("/google", passport.authenticate("google", { scope: ["profile"] }))
 // router.get(
-// 	'/google/callback',
-// 	passport.authenticate('google', {
-// 		successRedirect: '/',
-// 		failureRedirect: '/login'
+// 	"/google/callback",
+// 	passport.authenticate("google", {
+// 		successRedirect: "/",
+// 		failureRedirect: "/login"
 // 	})
 // )
-// router.get('/auth/twitter', passport.authenticate('google',{scope:['profile','email']}));
-// router.get('/auth/twitter/callback', passport.authenticate('google', {
-// 		successRedirect: '/rooms',
-// 		failureRedirect: '/',
+// router.get("/auth/twitter", passport.authenticate("google",{scope:["profile","email"]}));
+// router.get("/auth/twitter/callback", passport.authenticate("google", {
+// 		successRedirect: "/rooms",
+// 		failureRedirect: "/",
 // 		failureFlash: true
 // }));
-router.post('/register', (req,res)=>{
+router.post("/register", (req,res)=>{
 	
 	const { errors, isValid } = validateRegisterInput(req.body);
 	if (!isValid) {
@@ -39,14 +39,14 @@ router.post('/register', (req,res)=>{
 
 
 				
-	User.findOne({ 'local.username': req.body.name })
+	User.findOne({ "local.username": req.body.name })
 		.then(user=>{
 			if (!user) {
 				
 				
 				const newUser = new User({
-					'local.password': req.body.password,
-			        'local.useremail': req.body.email,
+					"local.password": req.body.password,
+			        "local.useremail": req.body.email,
 			        username: req.body.name,
 			        
 				});
@@ -72,8 +72,8 @@ router.post('/register', (req,res)=>{
 			else { return res.status(400).json({email: "Email already exists"});}
 			// else {
 			// 	const newUser = new User({
-			// 		'local.password': req.body.password,
-			//         'local.useremail': req.body.email,
+			// 		"local.password": req.body.password,
+			//         "local.useremail": req.body.email,
 			//         username: req.body.name
 			// 	});
 			// 	newUser
@@ -84,7 +84,7 @@ router.post('/register', (req,res)=>{
 			// }
 	});
 });
-// router.post('/register', (req,res)=>{
+// router.post("/register", (req,res)=>{
 	
 // 	const { errors, isValid } = validateRegisterInput(req.body);
 // 	if (!isValid) {
@@ -93,14 +93,14 @@ router.post('/register', (req,res)=>{
 
 
 				
-// 	User.findOne({ 'local.username': req.body.name })
+// 	User.findOne({ "local.username": req.body.name })
 // 		.then(user=>{
 // 			if (!user) {
 				
 				
 // 				const newUser = new User({
-// 					'local.password': req.body.password,
-// 			        'local.useremail': req.body.email,
+// 					"local.password": req.body.password,
+// 			        "local.useremail": req.body.email,
 // 			        username: req.body.name,
 			        
 // 				});
@@ -111,7 +111,7 @@ router.post('/register', (req,res)=>{
 					
 // 					.then(user=>sendEmail(user.local.useremail, templates.confirmed(user._id)))
 					
-// 					.then(()=>console.log('final process'))
+// 					.then(()=>console.log("final process"))
 // 					.then(()=>res.json({msg:messages.confirm}))
 // 					.catch(err=>res.json(err));
 // 		        // User.create({ email })
@@ -126,8 +126,8 @@ router.post('/register', (req,res)=>{
 // 			else { return res.status(400).json({email: "Email already exists"});}
 // 			// else {
 // 			// 	const newUser = new User({
-// 			// 		'local.password': req.body.password,
-// 			//         'local.useremail': req.body.email,
+// 			// 		"local.password": req.body.password,
+// 			//         "local.useremail": req.body.email,
 // 			//         username: req.body.name
 // 			// 	});
 // 			// 	newUser
@@ -138,7 +138,7 @@ router.post('/register', (req,res)=>{
 // 			// }
 // 	});
 // });
-// router.get('/register/confirm/:id', (req,res)=>{
+// router.get("/register/confirm/:id", (req,res)=>{
 // 	const {id} = req.params;
 
 // 	User.findById(id)
@@ -167,22 +167,22 @@ router.post('/register', (req,res)=>{
 //     })
 //     .catch(err => console.log(err))
 // })
-router.get('/error', (req,res)=>{
-	console.log('accept error')
+router.get("/error", (req,res)=>{
+	console.log("accept error")
 	console.log(req)
 	console.log(res)
 })
 router.post(
-	'/login',
+	"/login",
 	(req, res, next) =>{
 		console.log(req.body)
-		console.log('================')
+		console.log("================")
 		const { errors, isValid } = validateLoginInput(req.body);
 	
 		if (!isValid) {
 	    return res.status(400).json(errors);
 	  	}
-	  	passport.authenticate('local', function(err, user, info) {
+	  	passport.authenticate("local", function(err, user, info) {
 	    if (err) { return next(err); }
 	    if (!user) { 
 	    	res.status(400).json(info)
@@ -199,7 +199,7 @@ router.post(
 
 				jwt.sign(
 					payload,
-					'secret',
+					"secret",
 					(err,token)=>{
 						res.json({
 							success: true,
@@ -211,7 +211,7 @@ router.post(
 	  	})(req,res,next)
 
 	},
-	 // passport.authenticate('local', function(err, user, info) {
+	 // passport.authenticate("local", function(err, user, info) {
   //   if (err) { return next(err); }
   //   if (!user) { 
   //   	res.status(400).json(info)
@@ -220,9 +220,9 @@ router.post(
 
 	// (req, res) => {
 		
-	// 	console.log('res reach')
+	// 	console.log("res reach")
 	// 	console.log(req.user)
-	// 	console.log('req done')
+	// 	console.log("req done")
 	// 	// if (req.user.confirm) {}
 	// 	const user = JSON.parse(JSON.stringify(req.user)) // hack
 	// 	const cleanUser = Object.assign({}, user)
@@ -234,7 +234,7 @@ router.post(
 
 	// 			jwt.sign(
 	// 				payload,
-	// 				'secret',
+	// 				"secret",
 	// 				(err,token)=>{
 	// 					res.json({
 	// 						success: true,
@@ -246,7 +246,7 @@ router.post(
 )
   
 
-// router.post('/login', 
+// router.post("/login", 
 	
 // 	(req, res) => {
 // 	const { errors, isValid } = validateLoginInput(req.body);
@@ -257,9 +257,9 @@ router.post(
 
 // 	const useremail= req.body.email;
 // 	const password = req.body.password;
-// 	User.findOne({'local.useremail': useremail}).then(user=>{
+// 	User.findOne({"local.useremail": useremail}).then(user=>{
 // 		if (!user) {
-// 			return res.status(400).json({emailnotfound: 'Email Not Found.'});
+// 			return res.status(400).json({emailnotfound: "Email Not Found."});
 // 		}
 // 		bcrypt.compare(password, user.local.password).then(isMatch=>{
 // 			if (isMatch) {
@@ -270,7 +270,7 @@ router.post(
 
 // 				jwt.sign(
 // 					payload,
-// 					'secret',
+// 					"secret",
 // 					(err,token)=>{
 // 						res.json({
 // 							success: true,
