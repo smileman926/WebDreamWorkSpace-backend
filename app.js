@@ -1,6 +1,6 @@
 require('dotenv').config();
 const express = require('express');
-//const path = require('path');
+const path = require('path');
 const bodyParser = require('body-parser');
 //const session = require('express-session');
 const cors = require('cors');
@@ -15,10 +15,20 @@ const mongoose = require('mongoose');
 const app = express();
 
 //Configure App
+var graphqlHTTP = require('express-graphql');
+var schema = require('./graphql/boardSchemas');
 app.use(cors());
 // app.use(cors({
 //   origin: CLIENT_ORIGIN
 // }))
+
+app.use('/graphql', cors(), graphqlHTTP({
+  schema: schema,
+  rootValue: global,
+  graphiql: true,
+}));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 const google = require('./routes/api/google');
