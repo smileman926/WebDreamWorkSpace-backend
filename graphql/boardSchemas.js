@@ -7,6 +7,7 @@ var GraphQLBoolean = require('graphql').GraphQLBoolean;
 var GraphQLDate = require('graphql-date');
 var BoardModel = require('../models/Board');
 var pureBoardModel = require("../models/pureBoard");
+var GraphQLBoolean = require('graphql').GraphQLBoolean;
 
 var boardType = new GraphQLObjectType({
   name: 'board',
@@ -136,33 +137,39 @@ var mutation = new GraphQLObjectType({
             name: '_id',
             type: new GraphQLNonNull(GraphQLString)
           },
-          isStarred: {
-            type: GraphQLNonNull(GraphQLBoolean) 
+          star: {
+            name: 'isStarred',
+            type: new GraphQLNonNull(GraphQLBoolean)
           }
         },
         
         resolve(root, params) {
-          return pureBoardModel.findByIdAndUpdate(params.id, { isStarred: true }, function (err) {
+          
+          return pureBoardModel.findByIdAndUpdate(params.id, { isStarred: !params.star }, function (err) {
             if (err) return next(err);
           });
         }
       },
     
       addBoard: {
-        type: boardType,
+        type: pureBoardType,
         args: {
           backgroundImageUrl: {
             type: new GraphQLNonNull(GraphQLString)
           },
           title: {
             type: new GraphQLNonNull(GraphQLString)
-          },
-          author: {
-            type: new GraphQLNonNull(GraphQLString)
           }
         },
         resolve: function (root, params) {
-          const boardModel = new BoardModel(params);
+          console.log(params)
+          const newParams = {
+            backgroundImageUrl: params.backgroundImageUrl,
+            title: params.title,
+            isStarred: false,
+            visitedTime: Date()
+          }
+          const boardModel = new pureBoardModel(newParams);
           const newCard = boardModel.save();
           if (!newCard) {
             throw new Error('Error');
